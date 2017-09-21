@@ -11,7 +11,7 @@ import android.widget.TextView
  * 创建日期：2017/9/21 14:06
  * ===============================
  */
-class ClassKot(text: TextView) {
+class ClassKot(text: View) {
 
     private val bar: Int = 1
     private var textView = text

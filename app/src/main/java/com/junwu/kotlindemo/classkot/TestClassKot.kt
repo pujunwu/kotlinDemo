@@ -1,5 +1,6 @@
 package com.junwu.kotlindemo.classkot
 
+import android.view.View
 import android.widget.TextView
 
 /**
@@ -9,7 +10,7 @@ import android.widget.TextView
  * 创建日期：2017/9/21 14:07
  * ===============================
  */
-class TestClassKot(text: TextView) {
+class TestClassKot(text: View) {
 
     private var textView = text
 

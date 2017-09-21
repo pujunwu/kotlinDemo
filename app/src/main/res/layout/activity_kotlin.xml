@@ -1,55 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:scrollbars="none">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:id="@+id/llRootView"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="onKotlinListener"
-        android:padding="10dp"
-        android:text="点击跳转"/>
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/etInput"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:inputType="number"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onKotlinListener"
+            android:padding="10dp"
+            android:text="点击跳转"/>
 
-    <TextView
-        android:id="@+id/tvInterface"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:padding="10dp"
-        android:text="接口实现测试"/>
+        <!--<EditText-->
+            <!--android:id="@+id/etInput"-->
+            <!--android:layout_width="120dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:inputType="number"/>-->
 
-    <TextView
-        android:id="@+id/tvAbstract"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:padding="10dp"
-        android:text="抽象类实现测试"/>
+        <TextView
+            android:id="@+id/tvInterface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="接口实现测试"/>
 
-    <TextView
-        android:id="@+id/tvBC"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:padding="10dp"
-        android:text="break 和 continue "/>
+        <TextView
+            android:id="@+id/tvAbstract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="抽象类实现测试"/>
 
-    <TextView
-        android:id="@+id/tvGetSet"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:padding="10dp"
-        android:text="备用字段测试"/>
+        <TextView
+            android:id="@+id/tvBC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="break 和 continue "/>
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/tvGetSet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="备用字段测试"/>
+
+        <TextView
+            android:id="@+id/tvNested"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="嵌套类测试"/>
+
+        <TextView
+            android:id="@+id/tvSingleton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="单例测试"/>
+
+    </LinearLayout>
+
+</ScrollView>
+
+

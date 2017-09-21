@@ -4,11 +4,15 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import com.junwu.kotlindemo.abstractkot.AbstractImp
+import com.junwu.kotlindemo.classkot.TestClassKot
 import com.junwu.kotlindemo.getsetkot.GetSetKot
 import com.junwu.kotlindemo.interfacekot.InterfaceImp
-
+import com.junwu.kotlindemo.singleton.MyClass
+import com.junwu.kotlindemo.singleton.SingletonKot
+import com.junwu.kotlindemo.singleton.SingletonParKot
 import kotlinx.android.synthetic.main.activity_kotlin.*
 
 /**
@@ -19,14 +23,22 @@ class KotlinActivity : AppCompatActivity(), View.OnClickListener {
     private val interfaceImp = InterfaceImp()
     private val abstractImp = AbstractImp(15)
     private val getSetKot = GetSetKot(5)
+    private var singletonParKot: SingletonParKot = SingletonParKot.getInstance("初始化传入的参数")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kotlin)
+
         tvInterface.setOnClickListener(this)
         tvAbstract.setOnClickListener(this)
         tvBC.setOnClickListener(this)
         tvGetSet.setOnClickListener(this)
+        tvNested.setOnClickListener {
+            showMessage("嵌套类测试，查看控制台")
+            TestClassKot(llRootView).funNested()
+            showMessage((it as TextView).text.toString())
+        }
+        tvSingleton.setOnClickListener(this)
     }
 
     fun onKotlinListener(view: View) {
@@ -58,13 +70,24 @@ class KotlinActivity : AppCompatActivity(), View.OnClickListener {
             }
             R.id.tvGetSet -> {
                 getSetKot.address = null
-                Toast.makeText(this, "备用字段为空打印结果:" + getSetKot.address, Toast.LENGTH_SHORT).show()
+                showMessage("备用字段为空打印结果:" + getSetKot.address)
+            }
+            R.id.tvSingleton -> {
+                showMessage("单例改变前的值：" + SingletonKot.INSTANCE.b)
+                SingletonKot.INSTANCE.b = "改变后的值"
+                showMessage("单例改变后的值：" + SingletonKot.INSTANCE.b)
+                showMessage("初始化传入的参数：" + singletonParKot.paramStr)
+                singletonParKot.paramStr = "重新传入的参数"
+                showMessage("参数2：" + singletonParKot.paramStr)
             }
             else -> {
 
             }
         }
+    }
 
+    fun showMessage(msg: String) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
     }
 
 }
