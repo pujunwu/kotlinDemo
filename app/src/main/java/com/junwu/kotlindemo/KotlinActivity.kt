@@ -11,8 +11,11 @@ import com.junwu.kotlindemo.classkot.TestClassKot
 import com.junwu.kotlindemo.delegatekt.DelegateTest
 import com.junwu.kotlindemo.getsetkot.GetSetKot
 import com.junwu.kotlindemo.interfacekot.InterfaceImp
+import com.junwu.kotlindemo.multiplekt.MultipleKot
+import com.junwu.kotlindemo.rangeskt.RangesKot
 import com.junwu.kotlindemo.singletonkt.SingletonKot
 import com.junwu.kotlindemo.singletonkt.SingletonParKot
+import com.junwu.kotlindemo.typekt.TypeKot
 import kotlinx.android.synthetic.main.activity_kotlin.*
 
 /**
@@ -28,26 +31,35 @@ class KotlinActivity : AppCompatActivity(), View.OnClickListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kotlin)
-
-        tvInterface.setOnClickListener(this)
-        tvAbstract.setOnClickListener(this)
-        tvBC.setOnClickListener(this)
-        tvGetSet.setOnClickListener(this)
         tvNested.setOnClickListener {
             showMessage("嵌套类测试，查看控制台")
             TestClassKot(llRootView).funNested()
             showMessage((it as TextView).text.toString())
         }
-        tvSingleton.setOnClickListener(this)
         tvDelegate.setOnClickListener {
             showMessage("${(it as TextView).text}，查看控制台")
             DelegateTest().testDelegat()
         }
+        setViewOnClickListener(arrayOf(
+                tvInterface, tvAbstract,
+                tvBC, tvGetSet, tvSingleton,
+                tvMultiple, tvRanges,tvType
+        ))
+
     }
 
     fun onKotlinListener(view: View) {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
+    }
+
+    /**
+     * 设置点击事件
+     */
+    private fun setViewOnClickListener(args: Array<View>) {
+        for (tv in args) {
+            tv.setOnClickListener(this)
+        }
     }
 
     override fun onClick(v: View?) {
@@ -84,9 +96,22 @@ class KotlinActivity : AppCompatActivity(), View.OnClickListener {
                 singletonParKot.paramStr = "重新传入的参数"
                 showMessage("参数2：" + singletonParKot.paramStr)
             }
+            R.id.tvMultiple -> {
+                showMessage("多重声明，查看控制台：")
+                MultipleKot().testMultiple()
+            }
+            R.id.tvRanges -> {
+                showMessage("Ranges表达式测试，查看控制台：")
+                RangesKot().rangesTest()
+            }
+            R.id.tvType -> {
+                showMessage("类型检查和转换，查看控制台：")
+                TypeKot().typeTest()
+            }
             else -> {
 
             }
+
         }
     }
 

@@ -11,6 +11,7 @@
         android:id="@+id/llRootView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
         android:orientation="vertical">
 
         <TextView
@@ -82,8 +83,40 @@
             android:padding="10dp"
             android:text="代理测试"/>
 
+
+        <TextView
+            android:id="@+id/tvMultiple"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="多重声明"/>
+
+        <TextView
+            android:id="@+id/tvRanges"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="范围表达式测试"/>
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="类型检查和转换测试"/>
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="范围表达式测试"/>
+
+
     </LinearLayout>
 
 </ScrollView>
-
-
