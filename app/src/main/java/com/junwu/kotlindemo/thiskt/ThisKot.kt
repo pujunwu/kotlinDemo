@@ -50,13 +50,16 @@ class ThisKot {
 //    空安全
 //    更多说明：https://huanglizhuo.gitbooks.io/kotlin-in-chinese/content/Other/Null-Safety.html
 
-//    空安全
-//    更多说明：https://huanglizhuo.gitbooks.io/kotlin-in-chinese/content/Other/Null-Safety.html
+//    异常
+//    更多说明：https://huanglizhuo.gitbooks.io/kotlin-in-chinese/content/Other/Exceptions.html
 
-//    空安全
-//    更多说明：https://huanglizhuo.gitbooks.io/kotlin-in-chinese/content/Other/Null-Safety.html
+//    注解
+//    更多说明：https://huanglizhuo.gitbooks.io/kotlin-in-chinese/content/Other/Annotations.html
 
-//    空安全
-//    更多说明：https://huanglizhuo.gitbooks.io/kotlin-in-chinese/content/Other/Null-Safety.html
+//    反射
+//    更多说明：https://huanglizhuo.gitbooks.io/kotlin-in-chinese/content/Other/Reflection.html
+
+//    动态类型
+//    更多说明：https://huanglizhuo.gitbooks.io/kotlin-in-chinese/content/Other/Dynamic-Type.html
 
 }
