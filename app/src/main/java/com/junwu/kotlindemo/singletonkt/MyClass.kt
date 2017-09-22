@@ -1,4 +1,4 @@
-package com.junwu.kotlindemo.singleton
+package com.junwu.kotlindemo.singletonkt
 
 /**
  * ===============================

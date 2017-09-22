@@ -8,11 +8,11 @@ import android.widget.TextView
 import android.widget.Toast
 import com.junwu.kotlindemo.abstractkot.AbstractImp
 import com.junwu.kotlindemo.classkot.TestClassKot
+import com.junwu.kotlindemo.delegatekt.DelegateTest
 import com.junwu.kotlindemo.getsetkot.GetSetKot
 import com.junwu.kotlindemo.interfacekot.InterfaceImp
-import com.junwu.kotlindemo.singleton.MyClass
-import com.junwu.kotlindemo.singleton.SingletonKot
-import com.junwu.kotlindemo.singleton.SingletonParKot
+import com.junwu.kotlindemo.singletonkt.SingletonKot
+import com.junwu.kotlindemo.singletonkt.SingletonParKot
 import kotlinx.android.synthetic.main.activity_kotlin.*
 
 /**
@@ -39,6 +39,10 @@ class KotlinActivity : AppCompatActivity(), View.OnClickListener {
             showMessage((it as TextView).text.toString())
         }
         tvSingleton.setOnClickListener(this)
+        tvDelegate.setOnClickListener {
+            showMessage("${(it as TextView).text}，查看控制台")
+            DelegateTest().testDelegat()
+        }
     }
 
     fun onKotlinListener(view: View) {

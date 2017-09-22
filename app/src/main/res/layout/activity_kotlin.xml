@@ -74,6 +74,14 @@
             android:padding="10dp"
             android:text="单例测试"/>
 
+        <TextView
+            android:id="@+id/tvDelegate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:padding="10dp"
+            android:text="代理测试"/>
+
     </LinearLayout>
 
 </ScrollView>

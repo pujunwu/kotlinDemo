@@ -2,7 +2,6 @@ package com.junwu.kotlindemo.classkot
 
 import android.util.Log
 import android.view.View
-import android.widget.TextView
 
 /**
  * ===============================
