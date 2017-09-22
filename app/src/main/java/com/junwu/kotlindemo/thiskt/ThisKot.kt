@@ -48,6 +48,7 @@ class ThisKot {
 //    更多说明：https://huanglizhuo.gitbooks.io/kotlin-in-chinese/content/Other/Opetator-overloading.html
 
 //    空安全
+//    第三个选择是 NPE-lovers。我们可以用 b!! ，这会返回一个非空的 b 或者抛出一个 b 为空的 NPE
 //    更多说明：https://huanglizhuo.gitbooks.io/kotlin-in-chinese/content/Other/Null-Safety.html
 
 //    异常

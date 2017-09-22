@@ -14,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClickListener(View view) {
+        //跳转到kotlin activity
         startActivity(new Intent(this, KotlinActivity.class));
     }
 

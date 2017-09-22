@@ -43,7 +43,7 @@ class KotlinActivity : AppCompatActivity(), View.OnClickListener {
         setViewOnClickListener(arrayOf(
                 tvInterface, tvAbstract,
                 tvBC, tvGetSet, tvSingleton,
-                tvMultiple, tvRanges,tvType
+                tvMultiple, tvRanges, tvType
         ))
 
     }
@@ -68,21 +68,21 @@ class KotlinActivity : AppCompatActivity(), View.OnClickListener {
         }
         when (v.id) {
             R.id.tvInterface -> {
-                Toast.makeText(this, "当前打印的是：" + interfaceImp.getStr(), Toast.LENGTH_SHORT).show()
-                Toast.makeText(this, "测试循环打印，看控制台", Toast.LENGTH_SHORT).show()
+                showMessage("当前打印的是：" + interfaceImp.getStr())
+                showMessage("测试循环打印，看控制台")
                 interfaceImp.funA(intArrayOf(1, 2, 3, 4, 5))
             }
             R.id.tvAbstract -> {
-                Toast.makeText(this, "当前打印的是：" + abstractImp.address, Toast.LENGTH_SHORT).show()
-                Toast.makeText(this, "测试循环打印，看控制台", Toast.LENGTH_SHORT).show()
+                showMessage("当前打印的是：" + abstractImp.address)
+                showMessage("测试循环打印，看控制台")
                 abstractImp.funExample1()
             }
             R.id.tvBC -> {
-                Toast.makeText(this, "break 和 continue，看控制台", Toast.LENGTH_SHORT).show()
+                showMessage("break 和 continue，看控制台")
                 abstractImp.funContinue()
                 abstractImp.funBreak()
                 getSetKot.address = "3223423e"
-                Toast.makeText(this, "备用字段" + getSetKot.address, Toast.LENGTH_SHORT).show()
+                showMessage("备用字段" + getSetKot.address)
             }
             R.id.tvGetSet -> {
                 getSetKot.address = null
@@ -111,7 +111,6 @@ class KotlinActivity : AppCompatActivity(), View.OnClickListener {
             else -> {
 
             }
-
         }
     }
 

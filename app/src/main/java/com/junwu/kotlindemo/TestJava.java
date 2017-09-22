@@ -58,7 +58,6 @@ public class TestJava {
     }
 
     private static void showMessage(String msg) {
-//        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
         System.out.println(msg);
     }
 
