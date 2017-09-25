@@ -63,4 +63,6 @@ class ThisKot {
 //    动态类型
 //    更多说明：https://huanglizhuo.gitbooks.io/kotlin-in-chinese/content/Other/Dynamic-Type.html
 
+
+
 }

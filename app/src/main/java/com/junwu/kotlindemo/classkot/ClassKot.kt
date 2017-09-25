@@ -2,6 +2,7 @@ package com.junwu.kotlindemo.classkot
 
 import android.util.Log
 import android.view.View
+import kotlin.properties.Delegates
 
 /**
  * ===============================
@@ -11,6 +12,12 @@ import android.view.View
  * ===============================
  */
 class ClassKot(text: View) {
+
+//    对于非空类型的属性是必须初始化的。如果我们希望延迟进行初始化，就可以使用lateinit关键字了
+//    lateinit只能在不可null的对象上使用，比须为var
+//    private lateinit var mAdapter: RecyclerAdapter<Transaction>
+//    并且 lateinit 不支持基础数据类型，比如 Int。对于基础数据类型，我们可以这样
+//    private var mNumber: Int by Delegates.notNull<Int>()
 
     private val bar: Int = 1
     private var textView = text
