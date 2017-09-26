@@ -18,8 +18,8 @@ import javax.inject.Singleton
 interface AppComponent {
     fun inject(app: AppKot)
 
-    fun inject(activity:KotlinDaggerActivity)
+    fun inject(activity: KotlinDaggerActivity)
 
-    fun inject(activity:MainActivity)
+    fun inject(activity: MainActivity)
 
 }
