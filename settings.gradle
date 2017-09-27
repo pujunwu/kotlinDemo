@@ -1,1 +1,1 @@
-include ':app', ':mvplibrarytest', ':mvplibrary'
+include ':app',  ':daggerlibrary'/*,':mvplibrary'*/

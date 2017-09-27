@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
 
-          package="com.junwu.mvplibrary"
+          package="junwu.com.daggerlibrary"
     >
 
     <application
@@ -10,9 +10,8 @@
         >
 
         <activity
-            android:name=".ui.activitys.home.HomeActivity"
-            android:screenOrientation="portrait"
-            />
+            android:name=".ui.HomeActivity"
+            android:screenOrientation="portrait"/>
 
     </application>
 

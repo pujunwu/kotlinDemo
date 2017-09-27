@@ -8,6 +8,8 @@ import android.widget.Toast;
 
 import javax.inject.Inject;
 
+import junwu.com.daggerlibrary.ui.HomeActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Inject
@@ -19,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         AppKot.Companion.getAppkot().getComponent().inject(this);
 
-        Toast.makeText(this,mAppKot.toString(),Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, mAppKot.toString(), Toast.LENGTH_SHORT).show();
     }
 
     public void onClickListener(View view) {
@@ -32,9 +34,10 @@ public class MainActivity extends AppCompatActivity {
                 //跳转到kotlin activity
                 startActivity(new Intent(this, KotlinDaggerActivity.class));
                 break;
+            case R.id.tv_text2:
+                startActivity(new Intent(this, HomeActivity.class));
+                break;
         }
-
-
     }
 
 }
