@@ -3,6 +3,9 @@ package com.junwu.mvplibrary.ui.activitys.home
 import com.junwu.mvplibrary.di.scope.ViewScope
 import dagger.Module
 import dagger.Provides
+import okhttp3.OkHttpClient
+import java.util.concurrent.TimeUnit
+import javax.inject.Singleton
 
 /**
  * ===============================
