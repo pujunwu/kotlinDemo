@@ -118,10 +118,10 @@ class KotlinActivity : AppCompatActivity(), View.OnClickListener {
             }
         }
     }
-
     fun showMessage(msg: String) {
         Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
     }
-
 }
+
+
 
