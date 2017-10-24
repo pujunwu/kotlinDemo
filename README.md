@@ -1,7 +1,7 @@
 <div class="span6 preview" style="max-height: 647px; min-height: 647px;"><h1 class="title mousetrap">kotlinDemo</h1><div class="content mousetrap"><p>纯粹是个人学习总结，如有不对的地方请吐槽。</p>
 <h3>kotlin学习笔记</h3>
 <h4>demo类</h4>
-<code>package com.junwu.kotlindemo
+<pre class="hljs undefined"><code>package com.junwu.kotlindemo
 
 import android.content.Intent
 import android.os.Bundle
@@ -69,45 +69,45 @@ class KotlinActivity : AppCompatActivity(), View.OnClickListener {
     }
     when (v.id) {
         R.id.tvInterface -&gt; {
-            showMessage("当前打印的是：" + interfaceImp.getStr())
-            showMessage("测试循环打印，看控制台")
-            interfaceImp.funA(intArrayOf(1, 2, 3, 4, 5))
+        showMessage("当前打印的是：" + interfaceImp.getStr())
+        showMessage("测试循环打印，看控制台")
+        interfaceImp.funA(intArrayOf(1, 2, 3, 4, 5))
         }
         R.id.tvAbstract -&gt; {
-            showMessage("当前打印的是：" + abstractImp.address)
-            showMessage("测试循环打印，看控制台")
-            abstractImp.funExample1()
+        showMessage("当前打印的是：" + abstractImp.address)
+        showMessage("测试循环打印，看控制台")
+        abstractImp.funExample1()
         }
         R.id.tvBC -&gt; {
-            showMessage("break 和 continue，看控制台")
-            abstractImp.funContinue()
-            abstractImp.funBreak()
-            getSetKot.address = "3223423e"
-            showMessage("备用字段" + getSetKot.address)
+        showMessage("break 和 continue，看控制台")
+        abstractImp.funContinue()
+        abstractImp.funBreak()
+        getSetKot.address = "3223423e"
+        showMessage("备用字段" + getSetKot.address)
         }
         R.id.tvGetSet -&gt; {
-            getSetKot.address = null
-            showMessage("备用字段为空打印结果:" + getSetKot.address)
+        getSetKot.address = null
+        showMessage("备用字段为空打印结果:" + getSetKot.address)
         }
         R.id.tvSingleton -&gt; {
-            showMessage("单例改变前的值：" + SingletonKot.INSTANCE.b)
-            SingletonKot.INSTANCE.b = "改变后的值"
-            showMessage("单例改变后的值：" + SingletonKot.INSTANCE.b)
-            showMessage("初始化传入的参数：" + singletonParKot.paramStr)
-            singletonParKot.paramStr = "重新传入的参数"
-            showMessage("参数2：" + singletonParKot.paramStr)
+        showMessage("单例改变前的值：" + SingletonKot.INSTANCE.b)
+        SingletonKot.INSTANCE.b = "改变后的值"
+        showMessage("单例改变后的值：" + SingletonKot.INSTANCE.b)
+        showMessage("初始化传入的参数：" + singletonParKot.paramStr)
+        singletonParKot.paramStr = "重新传入的参数"
+        showMessage("参数2：" + singletonParKot.paramStr)
         }
         R.id.tvMultiple -&gt; {
-            showMessage("多重声明，查看控制台：")
-            MultipleKot().testMultiple()
+        showMessage("多重声明，查看控制台：")
+        MultipleKot().testMultiple()
         }
         R.id.tvRanges -&gt; {
-            showMessage("Ranges表达式测试，查看控制台：")
-            RangesKot().rangesTest()
+        showMessage("Ranges表达式测试，查看控制台：")
+        RangesKot().rangesTest()
         }
         R.id.tvType -&gt; {
-            showMessage("类型检查和转换，查看控制台：")
-            TypeKot().typeTest()
+        showMessage("类型检查和转换，查看控制台：")
+        TypeKot().typeTest()
         }
         else -&gt; {
 
@@ -116,9 +116,9 @@ class KotlinActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     fun showMessage(msg: String) {
-        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
+    Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
     }
 
 }
-</code>
+</code></pre>
 </div></div>
