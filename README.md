@@ -1,7 +1,7 @@
 <div class="span6 preview" style="max-height: 647px; min-height: 647px;"><h1 class="title mousetrap">kotlinDemo</h1><div class="content mousetrap"><p>纯粹是个人学习总结，如有不对的地方请吐槽。</p>
 <h3>kotlin学习笔记</h3>
 <h4>demo类</h4>
-<pre class="hljs undefined"><code>package com.junwu.kotlindemo
+<code>package com.junwu.kotlindemo
 
 import android.content.Intent
 import android.os.Bundle
@@ -120,5 +120,5 @@ class KotlinActivity : AppCompatActivity(), View.OnClickListener {
     }
 
 }
-</code></pre>
+</code>
 </div></div>
